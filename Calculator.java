@@ -25,8 +25,15 @@ public class Calculator {
                 System.out.println(a * b);
                 looping = false;
             }
+            // step 5 - if user enters 0, print out "Error: divide by zero"
             else if (next.equals("D") || next.equals("d")) {
-                System.out.println(a / b);
+                if (b == 0){
+                    System.out.println("Error: divide by zero");
+                }
+                else{
+                    System.out.println(a / b);
+                }
+                
                 looping = false;
             }
         }
