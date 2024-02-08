@@ -8,17 +8,25 @@ public class Calculator {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-        // step 2
+        // step 2 - updated to include step 3
         boolean looping = true;
         while (looping) {
-            System.out.println("Would you like to perform addition or subtraction with those numbers? 'Y' for addition, 'N' for subtraction");
+            System.out.println("Would you like to perform addition, subtraction, multiplication, or division with those numbers? 'A' for addition, 'S' for subtraction, 'M' for multiplication, 'D' for division.");
             String next = sc.next();
-            if (next.equals("Y") || next.equals("y")) {
+            if (next.equals("A") || next.equals("a")) {
                 System.out.println(a + b);
                 looping = false;
             } 
-            else if (next.equals("N") || next.equals("n")) {
+            else if (next.equals("S") || next.equals("s")) {
                 System.out.println(a - b);
+                looping = false;
+            }
+            else if (next.equals("M") || next.equals("m")) {
+                System.out.println(a * b);
+                looping = false;
+            }
+            else if (next.equals("D") || next.equals("d")) {
+                System.out.println((double)a / b);
                 looping = false;
             }
         }
